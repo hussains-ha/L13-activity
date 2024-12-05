@@ -4,9 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repo  # Use consistent naming (Checkout repo vs Checkout Repo)
         uses: actions/checkout@v4
-        
+  
       - name: Build the index.html file
         run: python build.py
 
@@ -28,11 +28,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
   lint:
     runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repo
-          uses: actions/checkout@v3  
+    steps:
+      - name: Checkout Repo  # Consistent naming
+        uses: actions/checkout@v3
 
-        - name: Linter
-          uses: actions/super-linter@v4
+      - name: Linter
+        uses: actions/super-linter@v4
