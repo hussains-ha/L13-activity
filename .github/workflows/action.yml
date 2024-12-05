@@ -29,10 +29,10 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  lint:
+  labeler:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo  # Consistent naming
+      - name: Checkout Repo
         uses: actions/checkout@v3
 
       - name: Linter
