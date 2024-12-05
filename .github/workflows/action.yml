@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo  # Use consistent naming (Checkout repo vs Checkout Repo)
+      - name: Checkout repo 
         uses: actions/checkout@v4
   
       - name: Build the index.html file
@@ -35,5 +35,5 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Linter
+      - name: Labeler
         uses: actions/labeler@v5
